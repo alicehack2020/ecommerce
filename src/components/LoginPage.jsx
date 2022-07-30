@@ -15,8 +15,8 @@ const LoginPage = () => {
 
   return (
     <div>
-        <input type="text" name="" id=""  value={email} onChange={(e)=>setEmail(e.target.value)}/>
-        <input type="text" name="" id="" value={password} onChange={(e)=>setpassword(e.target.value)}/>
+        <input type="text" placeholder='Enter Email' name="" id=""  value={email} onChange={(e)=>setEmail(e.target.value)}/>
+        <input type="text" name="" placeholder='Enter Password' id="" value={password} onChange={(e)=>setpassword(e.target.value)}/>
         <button onClick={handdleLogin}>login</button>
     </div>
   )
