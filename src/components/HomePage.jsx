@@ -6,14 +6,15 @@ const [data,setData]=useState([])
 const [order,setOrder]=useState("asc")
  
 useEffect(()=>{
-  loadData()
-},[]) 
+ // loadData()
+ fetch(`https://ecommercjson.herokuapp.com/products?_order=${order}`)
+ .then(response => response.json())
+ .then(data => setData(data)); 
+}) 
  
-const loadData=()=>{
-  fetch(`https://ecommercjson.herokuapp.com/products?_order=${order}`)
-  .then(response => response.json())
-  .then(data => setData(data)); 
-}
+// const loadData=()=>{
+ 
+// }
 
  
  
